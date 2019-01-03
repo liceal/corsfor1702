@@ -29,6 +29,9 @@ app.use(express.static(path.join(__dirname, 'static')));    // 设置静态文�
 
 
 app.all('*', function(req, res, next) {
+    /**修改后端app.js文件接受指定对象请求
+     * 第一条内的http填写接受指定 地址 的请求
+     */
     res.header("Access-Control-Allow-Origin", "http://10.30.29.69:63341");
     res.header("Access-Control-Allow-Credentials", "true");
     res.header('Access-Control-Allow-Headers', 'Content-Type');
