@@ -40,6 +40,11 @@
                 });
 
                 $.ajax({
+                    /**personal页面登录后返回数据显示
+                     * 此url是另外一个服务端传递
+                     *  那个服务端需要解决跨域问题
+                     *  返回json数据才能接受执行
+                     */
                     url: 'http://10.30.29.70:80/profile.php',
                     type: 'GET',
                     dataType: 'json',
@@ -51,7 +56,10 @@
 
                 $('#btnLogout').click(function () {
                     $.ajax({
-                        url: 'http://localhost:3000/logout',
+                        /**登出
+                         * 
+                         */
+                        url: 'http://10.30.29.69:3000/logout',
                         type: 'GET',
                         contentType: 'application/json;charset=utf-8',
                         xhrFields:{withCredentials:true},
